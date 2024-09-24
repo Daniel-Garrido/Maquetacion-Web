@@ -1,0 +1,245 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Encabezado */
+header.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+
+header.logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* Menú de navegación */
+.menu nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-top: 3px solid #ccc;
+  background-color: #fff;
+}
+
+.menu nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.menu nav a:hover, .menu nav a.active {
+  background-color: #000;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+/* Sección principal */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-image: url('img/foto_slide.jpg'); /* Reemplaza con la imagen de fondo adecuada */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.main h1 {
+  color: black;
+  font-size: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+/* Sección de cards */
+.info {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.info h2 {
+  font-size: 1.8rem;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  background-color: #e0e0e0;
+}
+
+.card {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.card p {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ccc;
+  color: #333;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+/***** Pie de página *******/
+/* Estilos para el footer */
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.footer_content{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+  border-top: 10px solid #ccc;
+  border-bottom: 10px solid #333;;
+  padding: 20px;
+ 
+}
+.logo img{
+  display: flex;
+  width: 100px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 30px;
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Color al hacer hover */
+}
+
+
+
+/************ Estilos responsivos (media queries) ***************/
+@media screen and (max-width: 780px) {
+  .contenedor {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .card {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  
+}
+
+
+@media screen and (max-width: 380px) {
+  .menu nav {
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  .menu nav a {
+    width: 100%;
+    text-align: left;
+  }
+  .main h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+}
+
+  
+  .contenedor {
+    display: flex;
+    justify-content: row;
+    
+  }
+  
+  .card {
+    width: 85%;
+    padding-bottom: 40px;
+  }
+  
+  .footer{
+    padding-bottom: 0px;
+  }
+  .footer_content{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+   
+    border-top: 5px solid #ccc;
+    border-bottom: 5px solid #333;;
+    padding: 10px;
+   
+    gap: 10px;
+   
+  }
+  .social-icons {
+    display: flex;
+    gap: 30px;
+  }
+  
+}
